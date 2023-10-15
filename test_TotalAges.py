@@ -17,7 +17,7 @@ class TestTotalAges(unittest.TestCase):
 
     def setUp(self):
         self.inputed_prompts = []
-        self.test_inputs = [5,7]
+        self.test_inputs = [5,7,6,7, 8,2]
         self.printed_lines = []
         self.index = 0
         total_ages.print = self.print_replacement
@@ -48,7 +48,9 @@ class TestTotalAges(unittest.TestCase):
         self.bin = 0
     
     def test_003TotalAgesOutputs(self):
-        expected = ["12\n"]
+        expected = ["12\n", "13\n", "10\n"]
+        total_ages.TotalAges()
+        total_ages.TotalAges()
         total_ages.TotalAges()
         self.assertListEqual(expected, self.printed_lines)
 
