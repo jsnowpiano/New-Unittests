@@ -1,5 +1,5 @@
 import unittest
-import greeting
+import src.greeting as greeting
 
 '''
 Do not modify this file. Run it in the same directory as your source code.

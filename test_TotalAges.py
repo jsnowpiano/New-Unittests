@@ -1,5 +1,5 @@
 import unittest
-import total_ages
+import src.total_ages as total_ages
 
 class TestTotalAges(unittest.TestCase):
     def input_replacement(self, prompt):
@@ -14,7 +14,7 @@ class TestTotalAges(unittest.TestCase):
         return r
     
     def print_replacement(self, *text):
-        line = " ".join(text) + "\n"
+        line = "".join(text) + "\n"
         self.printed_lines.append(line)
         print(text)
 
@@ -63,7 +63,6 @@ class TestTotalAges(unittest.TestCase):
             total = int(self.test_inputs[i][0]) + int(self.test_inputs[i][1])
             expected.append(str(total) + "\n" )
             total_ages.TotalAges()
-        print(self.printed_lines)
         '''
         Running tests
         '''
