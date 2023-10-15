@@ -38,7 +38,7 @@ class Test_Greeting(unittest.TestCase):
     def test_002GreetingPrompted(self):
         greeting.Greeting()
 
-        expected = ["Hi, What is your name? "]
+        expected = ["Hi, what is your name? "]
         self.assertListEqual(self.inputed_prompts, expected)
         self.index = 0
         self.inputed_prompts = []
